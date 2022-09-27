@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "issues",
+  "info": {
+    "singularName": "issue",
+    "pluralName": "issues",
+    "displayName": "Issue",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "publish_date": {
+      "type": "datetime",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "publish_month": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
