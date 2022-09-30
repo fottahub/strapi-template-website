@@ -4,33 +4,44 @@
   "info": {
     "singularName": "issue",
     "pluralName": "issues",
-    "displayName": "Issue",
+    "displayName": "Publication Issue",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "publish_date": {
+    "date_published": {
       "type": "datetime",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
+      "pluginOptions": {}
     },
-    "publish_month": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "issue_number": {
+      "pluginOptions": {},
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color"
+    },
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo.photo"
+    },
+    "printed_copies": {
+      "type": "integer",
+      "private": true,
+      "min": 100,
+      "default": 2000
+    },
+    "photo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::photo.photo",
+      "mappedBy": "publication_issue"
     }
   }
 }

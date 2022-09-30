@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * spot controller
+ * skater controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::spot.spot');
+module.exports = createCoreController('api::skater.skater');

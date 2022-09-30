@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * spot router
+ * skatespot router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::spot.spot');
+module.exports = createCoreRouter('api::skatespot.skatespot');
