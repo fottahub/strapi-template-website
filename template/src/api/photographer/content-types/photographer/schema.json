@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photographers",
+  "info": {
+    "singularName": "photographer",
+    "pluralName": "photographers",
+    "displayName": "Photographer"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo.photo",
+      "mappedBy": "photographer"
+    }
+  }
+}

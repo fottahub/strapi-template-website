@@ -37,11 +37,16 @@
       "min": 100,
       "default": 2000
     },
-    "photo": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::photo.photo",
-      "mappedBy": "publication_issue"
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

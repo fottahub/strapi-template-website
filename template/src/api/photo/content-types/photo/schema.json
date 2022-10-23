@@ -20,17 +20,25 @@
         "images"
       ]
     },
-    "skater": {
+    "player": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::skater.skater",
+      "target": "api::player.player",
       "inversedBy": "photos"
+    },
+    "page_number": {
+      "type": "integer"
     },
     "publication_issue": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::issue.issue",
-      "inversedBy": "photo"
+      "target": "api::issue.issue"
+    },
+    "photographer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::photographer.photographer",
+      "inversedBy": "photos"
     }
   }
 }
