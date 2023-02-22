@@ -20,25 +20,32 @@
         "images"
       ]
     },
-    "player": {
+    "players": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::player.player",
       "inversedBy": "photos"
     },
-    "page_number": {
-      "type": "integer"
-    },
-    "publication_issue": {
+    "trick": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::issue.issue"
+      "target": "api::trick.trick"
     },
-    "photographer": {
+    "creator": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::photographer.photographer",
-      "inversedBy": "photos"
+      "relation": "oneToOne",
+      "target": "api::creator.creator",
+      "inversedBy": "photo"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": true,
+      "component": "geospatial.locations"
+    },
+    "publication": {
+      "type": "component",
+      "repeatable": true,
+      "component": "print.page-number"
     }
   }
 }

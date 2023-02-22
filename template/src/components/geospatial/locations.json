@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_geospatial_locations",
+  "info": {
+    "displayName": "Locations"
+  },
+  "options": {},
+  "attributes": {
+    "coordinates": {
+      "type": "json"
+    }
+  }
+}

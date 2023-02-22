@@ -16,12 +16,6 @@
       "type": "datetime",
       "pluginOptions": {}
     },
-    "issue_number": {
-      "pluginOptions": {},
-      "type": "integer",
-      "unique": true,
-      "required": true
-    },
     "color": {
       "type": "customField",
       "customField": "plugin::color-picker.color"
@@ -43,9 +37,7 @@
       "required": false,
       "allowedTypes": [
         "images",
-        "files",
-        "videos",
-        "audios"
+        "files"
       ]
     }
   }

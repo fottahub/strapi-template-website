@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_landing_components_article_previews",
+  "info": {
+    "displayName": "Article Preview",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image_1": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::photo.photo"
+    },
+    "image_2": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::photo.photo"
+    },
+    "orientation": {
+      "type": "enumeration",
+      "enum": [
+        "text-left",
+        "text-right"
+      ]
+    }
+  }
+}

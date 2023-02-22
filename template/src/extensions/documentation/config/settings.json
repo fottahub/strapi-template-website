@@ -1,0 +1,14 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "1.0.1",
+      "title": "Fotta API Documentation",
+      "description": "The Fotta Skateboard Magazine server",
+      "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
+      "contact": {
+        "name": "Fotta we support crew",
+        "email": "redazione@fotta.it",
+        "url": "https://fotta.it"
+      }
+    }
+}

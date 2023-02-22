@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_print_page_numbers",
+  "info": {
+    "displayName": "Publications",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "page_number": {
+      "type": "integer"
+    },
+    "publication_issue": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::issue.issue"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_page_numero_1s",
+  "info": {
+    "singularName": "landing-page-numero-1",
+    "pluralName": "landing-page-numero-1s",
+    "displayName": "Landing page numero 1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "publication_issue": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::issue.issue"
+    },
+    "intro_title": {
+      "type": "string"
+    },
+    "intro_text": {
+      "type": "text"
+    },
+    "article_preview": {
+      "displayName": "article_preview",
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.article-preview"
+    },
+    "video": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::video.video"
+    }
+  }
+}
