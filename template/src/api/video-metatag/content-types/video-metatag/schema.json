@@ -22,9 +22,9 @@
       "relation": "oneToMany",
       "target": "api::player.player"
     },
-    "creator": {
+    "creators": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::creator.creator"
     },
     "tricks": {

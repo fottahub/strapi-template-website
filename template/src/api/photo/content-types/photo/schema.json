@@ -34,18 +34,20 @@
     "creator": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::creator.creator",
-      "inversedBy": "photo"
+      "target": "api::creator.creator"
     },
     "location": {
       "type": "component",
       "repeatable": true,
       "component": "geospatial.locations"
     },
-    "publication": {
-      "type": "component",
-      "repeatable": true,
-      "component": "print.page-number"
+    "publication_issue": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::issue.issue"
+    },
+    "publication_page": {
+      "type": "integer"
     }
   }
 }

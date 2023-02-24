@@ -1,7 +1,8 @@
 {
   "collectionName": "components_geospatial_locations",
   "info": {
-    "displayName": "Locations"
+    "displayName": "Locations",
+    "description": ""
   },
   "options": {},
   "attributes": {

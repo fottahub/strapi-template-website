@@ -36,29 +36,14 @@
       "default": "blah... blah... write here your content in pure MarkDown"
     },
     "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+      "pluginOptions": {},
       "type": "uid",
       "targetField": "title"
     },
     "creator": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::creator.creator",
-      "inversedBy": "articles"
-    },
-    "publication": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "print.page-number"
+      "relation": "oneToOne",
+      "target": "api::creator.creator"
     },
     "excerpt": {
       "pluginOptions": {
@@ -67,6 +52,19 @@
         }
       },
       "type": "text"
+    },
+    "publication_issue": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::issue.issue"
+    },
+    "publication_page": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer"
     }
   }
 }

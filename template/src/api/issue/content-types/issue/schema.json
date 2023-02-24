@@ -14,7 +14,8 @@
   "attributes": {
     "date_published": {
       "type": "datetime",
-      "pluginOptions": {}
+      "pluginOptions": {},
+      "unique": true
     },
     "color": {
       "type": "customField",
@@ -39,6 +40,11 @@
         "images",
         "files"
       ]
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
     }
   }
 }

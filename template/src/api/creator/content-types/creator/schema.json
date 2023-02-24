@@ -8,29 +8,18 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "photos": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::photo.photo"
-    },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "creator"
-    },
-    "photo": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::photo.photo",
-      "mappedBy": "creator"
     }
   }
 }
