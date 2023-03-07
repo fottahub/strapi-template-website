@@ -19,18 +19,21 @@
     },
     "players": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::player.player"
+      "relation": "manyToMany",
+      "target": "api::player.player",
+      "inversedBy": "video_metatags"
     },
     "creators": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::creator.creator"
+      "relation": "manyToMany",
+      "target": "api::creator.creator",
+      "mappedBy": "video_metatag"
     },
     "tricks": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::trick.trick"
+      "relation": "manyToMany",
+      "target": "api::trick.trick",
+      "mappedBy": "video_metatags"
     },
     "location": {
       "type": "component",

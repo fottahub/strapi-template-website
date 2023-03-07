@@ -14,12 +14,41 @@
   "attributes": {
     "name": {
       "type": "string",
-      "unique": true
+      "unique": true,
+      "pluginOptions": {}
     },
     "photos": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::photo.photo"
+    },
+    "bio": {
+      "type": "text",
+      "pluginOptions": {}
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "contact_instagram": {
+      "type": "string"
+    },
+    "video_metatag": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::video-metatag.video-metatag",
+      "inversedBy": "creators"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "creators"
     }
   }
 }

@@ -16,6 +16,12 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "video_metatags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::video-metatag.video-metatag",
+      "inversedBy": "tricks"
     }
   }
 }

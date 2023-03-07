@@ -21,6 +21,12 @@
       "relation": "manyToMany",
       "target": "api::photo.photo",
       "mappedBy": "players"
+    },
+    "video_metatags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::video-metatag.video-metatag",
+      "mappedBy": "players"
     }
   }
 }

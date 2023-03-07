@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "volumes",
+  "info": {
+    "singularName": "volume",
+    "pluralName": "volumes",
+    "displayName": "Publication Volume"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "default": "Volume"
+    },
+    "publication_issues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::issue.issue",
+      "mappedBy": "publication_volume"
+    }
+  }
+}

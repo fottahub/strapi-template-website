@@ -1,14 +1,27 @@
 {
-    "openapi": "3.0.0",
-    "info": {
-      "version": "1.0.1",
-      "title": "Fotta API Documentation",
-      "description": "The Fotta Skateboard Magazine server",
-      "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
-      "contact": {
-        "name": "Fotta we support crew",
-        "email": "redazione@fotta.it",
-        "url": "https://fotta.it"
-      }
+  "info": {
+    "version": "1.0.3",
+    "title": "Fotta API Documentation",
+    "description": "The Fotta Skateboard Magazine server",
+    "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
+    "contact": {
+      "name": "Fotta web support crew",
+      "email": "redazione@fotta.it",
+      "url": "https://fotta.it"
     }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:1337/api",
+      "description": "Development server"
+    },
+    {
+      "url": "https://staging-strapi.fotta.it/api",
+      "description": "Staging Fotta server"
+    },
+    {
+      "url": "https://strapi.fotta.it/api",
+      "description": "Production server"
+    }
+  ]
 }

@@ -45,6 +45,15 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article"
+    },
+    "publication_volume": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::volume.volume",
+      "inversedBy": "publication_issues"
+    },
+    "period": {
+      "type": "string"
     }
   }
 }
