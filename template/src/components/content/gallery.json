@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_galleries",
+  "info": {
+    "displayName": "Article Part",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo.photo"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

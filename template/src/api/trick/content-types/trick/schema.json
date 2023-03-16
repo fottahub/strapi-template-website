@@ -22,6 +22,12 @@
       "relation": "manyToMany",
       "target": "api::video-metatag.video-metatag",
       "inversedBy": "tricks"
+    },
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo.photo",
+      "mappedBy": "trick"
     }
   }
 }

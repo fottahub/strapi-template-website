@@ -20,34 +20,37 @@
         "images"
       ]
     },
-    "players": {
+    "player": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::player.player",
       "inversedBy": "photos"
     },
     "trick": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::trick.trick"
-    },
-    "creator": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::creator.creator"
+      "relation": "manyToOne",
+      "target": "api::trick.trick",
+      "inversedBy": "photos"
     },
     "location": {
       "type": "component",
       "repeatable": true,
       "component": "geospatial.locations"
     },
-    "publication_issue": {
+    "pub_issue": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::issue.issue"
+      "relation": "manyToOne",
+      "target": "api::issue.issue",
+      "inversedBy": "photos"
     },
-    "publication_page": {
+    "pub_page": {
       "type": "integer"
+    },
+    "creator": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::creator.creator",
+      "inversedBy": "photos"
     }
   }
 }

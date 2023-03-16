@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "date_published": {
+    "pub_date": {
       "type": "datetime",
       "pluginOptions": {},
       "unique": true
@@ -20,11 +20,6 @@
     "color": {
       "type": "customField",
       "customField": "plugin::color-picker.color"
-    },
-    "photos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::photo.photo"
     },
     "printed_copies": {
       "type": "integer",
@@ -41,19 +36,26 @@
         "files"
       ]
     },
+    "period": {
+      "type": "string"
+    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::article.article"
+      "target": "api::article.article",
+      "mappedBy": "publication_issue"
     },
-    "publication_volume": {
+    "pub_volume": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::volume.volume",
-      "inversedBy": "publication_issues"
+      "inversedBy": "pub_issues"
     },
-    "period": {
-      "type": "string"
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo.photo",
+      "mappedBy": "pub_issue"
     }
   }
 }

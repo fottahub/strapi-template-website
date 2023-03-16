@@ -16,17 +16,17 @@
       "type": "string",
       "required": true
     },
-    "photos": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::photo.photo",
-      "mappedBy": "players"
-    },
     "video_metatags": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::video-metatag.video-metatag",
       "mappedBy": "players"
+    },
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo.photo",
+      "mappedBy": "player"
     }
   }
 }

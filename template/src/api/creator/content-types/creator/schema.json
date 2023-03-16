@@ -17,11 +17,6 @@
       "unique": true,
       "pluginOptions": {}
     },
-    "photos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::photo.photo"
-    },
     "bio": {
       "type": "text",
       "pluginOptions": {}
@@ -49,6 +44,12 @@
       "relation": "manyToMany",
       "target": "api::article.article",
       "mappedBy": "creators"
+    },
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo.photo",
+      "mappedBy": "creator"
     }
   }
 }

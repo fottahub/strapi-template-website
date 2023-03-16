@@ -4,7 +4,8 @@
   "info": {
     "singularName": "volume",
     "pluralName": "volumes",
-    "displayName": "Publication Volume"
+    "displayName": "Publication Volume",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -25,11 +26,11 @@
       "required": true,
       "default": "Volume"
     },
-    "publication_issues": {
+    "pub_issues": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::issue.issue",
-      "mappedBy": "publication_volume"
+      "mappedBy": "pub_volume"
     }
   }
 }
